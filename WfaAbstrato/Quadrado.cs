@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 
 namespace WfaAbstrato
 {
@@ -17,7 +18,7 @@ namespace WfaAbstrato
         public override double CalcularArea()
         {
             /*return lado * lado;*/
-            return System.Math.Pow(lado, 2);
+            return Math.Pow(lado, 2);
         }
 
         public override double CalcularPerimetro()
@@ -28,7 +29,9 @@ namespace WfaAbstrato
 
         public override string ToString()
         {
-            return $"Quadrado ({lado})";
+            string ladoFormatado = lado.ToString("F2", CultureInfo.InvariantCulture).Replace('.', ',');
+            return $"Quadrado ({ladoFormatado})";
+
         }
     }
 }

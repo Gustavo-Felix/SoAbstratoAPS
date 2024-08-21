@@ -103,6 +103,7 @@
             // 
             this.txtArea.Location = new System.Drawing.Point(306, 74);
             this.txtArea.Name = "txtArea";
+            this.txtArea.ReadOnly = true;
             this.txtArea.Size = new System.Drawing.Size(100, 20);
             this.txtArea.TabIndex = 9;
             // 
@@ -110,6 +111,7 @@
             // 
             this.txtPerimetro.Location = new System.Drawing.Point(328, 102);
             this.txtPerimetro.Name = "txtPerimetro";
+            this.txtPerimetro.ReadOnly = true;
             this.txtPerimetro.Size = new System.Drawing.Size(100, 20);
             this.txtPerimetro.TabIndex = 8;
             // 
