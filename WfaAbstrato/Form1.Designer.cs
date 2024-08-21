@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbObjetos = new System.Windows.Forms.ComboBox();
             this.txtBase = new System.Windows.Forms.TextBox();
             this.txtAltura = new System.Windows.Forms.TextBox();
             this.txtRaio = new System.Windows.Forms.TextBox();
@@ -48,7 +48,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.cmbObjetos);
             this.groupBox1.Controls.Add(this.txtBase);
             this.groupBox1.Controls.Add(this.txtAltura);
             this.groupBox1.Controls.Add(this.txtRaio);
@@ -69,13 +69,14 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
             // 
-            // comboBox1
+            // cmbObjetos
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(402, 35);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(145, 21);
-            this.comboBox1.TabIndex = 13;
+            this.cmbObjetos.FormattingEnabled = true;
+            this.cmbObjetos.Location = new System.Drawing.Point(402, 35);
+            this.cmbObjetos.Name = "cmbObjetos";
+            this.cmbObjetos.Size = new System.Drawing.Size(145, 21);
+            this.cmbObjetos.TabIndex = 13;
+            this.cmbObjetos.SelectedIndexChanged += new System.EventHandler(this.cmbObjetos_SelectedIndexChanged);
             // 
             // txtBase
             // 
@@ -218,7 +219,7 @@
         private System.Windows.Forms.Label lblRaio;
         private System.Windows.Forms.Button btnCriar;
         private System.Windows.Forms.Label lblArea;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbObjetos;
         private System.Windows.Forms.TextBox txtBase;
         private System.Windows.Forms.TextBox txtAltura;
         private System.Windows.Forms.TextBox txtRaio;
