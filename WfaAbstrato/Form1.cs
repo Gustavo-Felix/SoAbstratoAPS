@@ -19,24 +19,62 @@ namespace WfaAbstrato
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            SelecionarTriangulo();
+            switch (cmbForma.Text)
+            {
+                case "Quadrado":
+                    SelecionarQuadrado();
+                    break;
+                case "Triangulo":
+                    SelecionarTriangulo();
+                    break;
+                default:
+                    break;                    
+            }
+        }
 
+        private void SelecionarQuadrado()
+        {
+            ExibirBase(true);
+            ExibirAltura(false);
+            ExibirRaio(false);
+
+            cmbTipo.Visible = false;
+        }
+
+        private void ExibirRaio(bool visible)
+        {
+            lblRaio.Visible = txtRaio.Visible = visible;
+        }
+
+        private void ExibirAltura(bool visible)
+        {
+            lblAltura.Visible = txtAltura.Visible = visible;
+        }
+
+        private void ExibirBase(bool visible)
+        {
+            lblBase.Visible = txtBase.Visible = visible;
         }
 
         private void SelecionarTriangulo()
         {
-            cmbTipo.Visible = cmbForma.Text.Equals("Triangulo");
-
-            lblBase.Visible = cmbForma.Text.Equals("Triangulo");
-            txtBase.Visible = cmbForma.Text.Equals("Triangulo");
-
-            lblAltura.Visible = cmbForma.Text.Equals("Triangulo");
-            txtAltura.Visible = cmbForma.Text.Equals("Triangulo");
+            cmbTipo.Visible = true;
+            ExibirBase(true);
+            ExibirAltura(true);
+            ExibirRaio(false);
         }
 
         private void cmbTipo_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnCriar_Click(object sender, EventArgs e)
+        {
+            if(cmbForma.Text.Equals("Quadrado"))
+            {
+
+            }
         }
     }
 }
