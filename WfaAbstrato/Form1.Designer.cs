@@ -43,11 +43,13 @@
             this.lblBase = new System.Windows.Forms.Label();
             this.cmbTipo = new System.Windows.Forms.ComboBox();
             this.cmbForma = new System.Windows.Forms.ComboBox();
+            this.btnSair = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnSair);
             this.groupBox1.Controls.Add(this.cmbObjetos);
             this.groupBox1.Controls.Add(this.txtBase);
             this.groupBox1.Controls.Add(this.txtAltura);
@@ -130,7 +132,7 @@
             this.btnCriar.Name = "btnCriar";
             this.btnCriar.Size = new System.Drawing.Size(75, 23);
             this.btnCriar.TabIndex = 6;
-            this.btnCriar.Text = "Criar";
+            this.btnCriar.Text = "&Criar";
             this.btnCriar.UseVisualStyleBackColor = true;
             this.btnCriar.Click += new System.EventHandler(this.btnCriar_Click);
             // 
@@ -197,6 +199,16 @@
             this.cmbForma.TabIndex = 0;
             this.cmbForma.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
+            // btnSair
+            // 
+            this.btnSair.Location = new System.Drawing.Point(603, 35);
+            this.btnSair.Name = "btnSair";
+            this.btnSair.Size = new System.Drawing.Size(73, 21);
+            this.btnSair.TabIndex = 14;
+            this.btnSair.Text = "&Sair";
+            this.btnSair.UseVisualStyleBackColor = true;
+            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -228,6 +240,7 @@
         private System.Windows.Forms.TextBox txtArea;
         private System.Windows.Forms.TextBox txtPerimetro;
         private System.Windows.Forms.Label lblPerimetro;
+        private System.Windows.Forms.Button btnSair;
     }
 }
 

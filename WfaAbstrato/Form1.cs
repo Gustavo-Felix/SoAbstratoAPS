@@ -90,5 +90,10 @@ namespace WfaAbstrato
             txtArea.Text = obj.CalcularArea().ToString();
             txtPerimetro.Text = obj.CalcularPerimetro().ToString();
         }
+
+        private void btnSair_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }
