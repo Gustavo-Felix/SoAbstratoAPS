@@ -59,7 +59,7 @@
     <Compile Include="Quadrado.cs" />
     <Compile Include="Retangulo.cs" />
     <Compile Include="TrianguloEquilatero.cs" />
-    <Compile Include="TrianguloIsosceses.cs" />
+    <Compile Include="TrianguloIsosceles.cs" />
     <Compile Include="TrianguloReto.cs" />
     <Compile Include="Triangulo.cs" />
     <EmbeddedResource Include="Form1.resx">

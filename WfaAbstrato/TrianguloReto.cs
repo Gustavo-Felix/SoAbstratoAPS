@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,7 +10,7 @@ namespace WfaAbstrato
     public class TrianguloReto : Triangulo
     {
         private double baseT;
-        private double alt;
+        private double altura;
         private double Cateto;
         private double CatetoO;
         private double hipo;
@@ -19,26 +20,33 @@ namespace WfaAbstrato
             get { return baseT; }
             set { baseT = value; }
         }
-        public double Alt
+        public double Altura
         {
-            get { return alt; }
-            set { alt = value; }
+            get { return altura; }
+            set { altura = value; }
         }
 
         public override double CalcularArea()
         {
-            return baseT * alt / 2;
+            return Math.Round((baseT * altura / 2), 2);
 
         }
 
         public override double CalcularPerimetro()
         {
-            Cateto = System.Math.Pow(baseT, 2);
-            CatetoO = System.Math.Pow(alt, 2);
+            Cateto = Math.Pow(baseT, 2);
+            CatetoO = Math.Pow(altura, 2);
 
-            hipo = System.Math.Sqrt(Cateto + CatetoO);
+            hipo = Math.Sqrt(Cateto + CatetoO);
 
-            return baseT + alt + hipo;
+            return Math.Round(baseT + altura + hipo, 2);
+        }
+
+        public override string ToString()
+        {
+            string BaseFormatado = baseT.ToString("F2", CultureInfo.InvariantCulture).Replace('.', ',');
+            return $"Triângulo Reto({BaseFormatado})";
+
         }
 
     }

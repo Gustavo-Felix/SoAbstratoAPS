@@ -18,12 +18,12 @@ namespace WfaAbstrato
         public override double CalcularArea()
         {
             /*return lado * lado;*/
-            return Math.Pow(lado, 2);
+            return Math.Round(Math.Pow(lado, 2), 2);
         }
 
         public override double CalcularPerimetro()
         {
-            return lado * 4;
+            return Math.Round(lado * 4, 2);
 
         }
 

@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace WfaAbstrato
 {
-    public abstract class Retangulo : FormaGeometrica
+    public class Retangulo : FormaGeometrica
     {
         private double baseT;
 
@@ -26,12 +27,18 @@ namespace WfaAbstrato
 
         public override double CalcularArea()
         {
-            return (baseT * alt);
+            return Math.Round((baseT * alt), 2);
 
         }
         public override double CalcularPerimetro()
         {
-            return ((baseT * 2) + (alt * 2));
+            return Math.Round(((baseT * 2) + (alt * 2)), 2);
+
+        }
+        public override string ToString()
+        {
+            string BaseFormatado = baseT.ToString("F2", CultureInfo.InvariantCulture).Replace('.', ',');
+            return $"Retângulo ({BaseFormatado})";
 
         }
     }

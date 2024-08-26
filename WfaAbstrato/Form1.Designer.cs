@@ -1,6 +1,6 @@
 ﻿namespace WfaAbstrato
 {
-    partial class Form1
+    partial class FrmCalcular
     {
         /// <summary>
         /// Variável de designer necessária.
@@ -28,7 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.gbCalcular = new System.Windows.Forms.GroupBox();
+            this.btnSair = new System.Windows.Forms.Button();
             this.cmbObjetos = new System.Windows.Forms.ComboBox();
             this.txtBase = new System.Windows.Forms.TextBox();
             this.txtAltura = new System.Windows.Forms.TextBox();
@@ -43,33 +44,42 @@
             this.lblBase = new System.Windows.Forms.Label();
             this.cmbTipo = new System.Windows.Forms.ComboBox();
             this.cmbForma = new System.Windows.Forms.ComboBox();
-            this.btnSair = new System.Windows.Forms.Button();
-            this.groupBox1.SuspendLayout();
+            this.gbCalcular.SuspendLayout();
             this.SuspendLayout();
             // 
-            // groupBox1
+            // gbCalcular
             // 
-            this.groupBox1.Controls.Add(this.btnSair);
-            this.groupBox1.Controls.Add(this.cmbObjetos);
-            this.groupBox1.Controls.Add(this.txtBase);
-            this.groupBox1.Controls.Add(this.txtAltura);
-            this.groupBox1.Controls.Add(this.txtRaio);
-            this.groupBox1.Controls.Add(this.txtArea);
-            this.groupBox1.Controls.Add(this.txtPerimetro);
-            this.groupBox1.Controls.Add(this.lblPerimetro);
-            this.groupBox1.Controls.Add(this.btnCriar);
-            this.groupBox1.Controls.Add(this.lblArea);
-            this.groupBox1.Controls.Add(this.lblRaio);
-            this.groupBox1.Controls.Add(this.lblAltura);
-            this.groupBox1.Controls.Add(this.lblBase);
-            this.groupBox1.Controls.Add(this.cmbTipo);
-            this.groupBox1.Controls.Add(this.cmbForma);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(776, 164);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
+            this.gbCalcular.Controls.Add(this.btnSair);
+            this.gbCalcular.Controls.Add(this.cmbObjetos);
+            this.gbCalcular.Controls.Add(this.txtBase);
+            this.gbCalcular.Controls.Add(this.txtAltura);
+            this.gbCalcular.Controls.Add(this.txtRaio);
+            this.gbCalcular.Controls.Add(this.txtArea);
+            this.gbCalcular.Controls.Add(this.txtPerimetro);
+            this.gbCalcular.Controls.Add(this.lblPerimetro);
+            this.gbCalcular.Controls.Add(this.btnCriar);
+            this.gbCalcular.Controls.Add(this.lblArea);
+            this.gbCalcular.Controls.Add(this.lblRaio);
+            this.gbCalcular.Controls.Add(this.lblAltura);
+            this.gbCalcular.Controls.Add(this.lblBase);
+            this.gbCalcular.Controls.Add(this.cmbTipo);
+            this.gbCalcular.Controls.Add(this.cmbForma);
+            this.gbCalcular.Location = new System.Drawing.Point(12, 12);
+            this.gbCalcular.Name = "gbCalcular";
+            this.gbCalcular.Size = new System.Drawing.Size(776, 164);
+            this.gbCalcular.TabIndex = 0;
+            this.gbCalcular.TabStop = false;
+            this.gbCalcular.Text = "Informações";
+            // 
+            // btnSair
+            // 
+            this.btnSair.Location = new System.Drawing.Point(603, 35);
+            this.btnSair.Name = "btnSair";
+            this.btnSair.Size = new System.Drawing.Size(73, 21);
+            this.btnSair.TabIndex = 14;
+            this.btnSair.Text = "&Sair";
+            this.btnSair.UseVisualStyleBackColor = true;
+            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
             // cmbObjetos
             // 
@@ -199,33 +209,24 @@
             this.cmbForma.TabIndex = 0;
             this.cmbForma.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
-            // btnSair
-            // 
-            this.btnSair.Location = new System.Drawing.Point(603, 35);
-            this.btnSair.Name = "btnSair";
-            this.btnSair.Size = new System.Drawing.Size(73, 21);
-            this.btnSair.TabIndex = 14;
-            this.btnSair.Text = "&Sair";
-            this.btnSair.UseVisualStyleBackColor = true;
-            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
-            // 
-            // Form1
+            // FrmCalcular
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.groupBox1);
-            this.Name = "Form1";
-            this.Text = "Form1";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.Controls.Add(this.gbCalcular);
+            this.Name = "FrmCalcular";
+            this.Text = "Calcular";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmCalcular_FormClosing);
+            this.gbCalcular.ResumeLayout(false);
+            this.gbCalcular.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox gbCalcular;
         private System.Windows.Forms.ComboBox cmbForma;
         private System.Windows.Forms.ComboBox cmbTipo;
         private System.Windows.Forms.Label lblAltura;
